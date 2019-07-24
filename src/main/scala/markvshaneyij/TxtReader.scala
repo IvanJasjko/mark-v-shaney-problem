@@ -2,16 +2,16 @@ package markvshaneyij
 
 import scala.io.Source
 
-class TxtReader(file: String) {
+class TxtReader(filename: String) {
 
-  private def readFile(filename: String = file): List[String] = {
+  private def readFile(): List[String] = {
     val file = Source.fromResource(filename)
     val fileContents = file.getLines.mkString.split(" ")
     file.close()
     fileContents.map(_.trim).toList
   }
 
-  def getPairs(filename: String = file): List[(String, String)] = {
+  def getPairs(): List[(String, String)] = {
 
     val words = readFile().zipWithIndex
 
