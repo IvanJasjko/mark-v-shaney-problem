@@ -8,9 +8,9 @@ class MarkovGen(corpus: List[(String, String)]) {
   val random = new Random()
 
   def makeChain(sentLength: Int): String = {
-    val start_pairs = for (pair <- corpus if pair._1.contains(".")) yield pair._2
+    val start_words = for (pair <- corpus if pair._1.contains(".")) yield pair._2
 
-    val chain = mutable.MutableList(start_pairs(random.nextInt(start_pairs.length)))
+    val chain = mutable.MutableList(start_words(random.nextInt(start_words.length)))
 
 
     // This is not very Scala-y
