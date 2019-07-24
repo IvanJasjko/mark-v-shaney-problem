@@ -1,0 +1,5 @@
+package markvshaneyij
+
+class MarkovGen {
+
+}

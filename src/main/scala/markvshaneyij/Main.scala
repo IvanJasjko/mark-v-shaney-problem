@@ -2,11 +2,8 @@ package markvshaneyij
 
 object Main {
 
-  def add(x: Int, y: Int): Int = {
-    x + y
-  }
-
   def main(args: Array[String]): Unit = {
-    println(add(2, 3))
+    val r = new TxtReader("text.txt")
+    r.getPairs().foreach(println)
   }
 }
