@@ -6,4 +6,4 @@ dist/
 target/
 project/plugins/project/
 
-src/main/resources/
+src/main/resources/text.txt
